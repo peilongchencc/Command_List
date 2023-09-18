@@ -1,0 +1,27 @@
+Function TransformerTaggingTokenizer took 0.032628 seconds to execute.
+Function TransformerTagger took 0.029901 seconds to execute.
+Function TransformerNamedEntityRecognizer took 0.033732 seconds to execute.
+Function BiaffineDependencyParser took 0.034808 seconds to execute.
+Function CRFConstituencyParser took 0.052868 seconds to execute.
+{
+  "tok": [
+    ["急性", "肠胃炎", "要", "如何", "治疗", "？"],
+    ["盛剑", "环境", "的", "股价", "太", "高", "了", "。"]
+  ],
+  "pos": [
+    ["JJ", "NN", "VV", "AD", "VV", "PU"],
+    ["NR", "NN", "DEG", "NN", "AD", "VA", "SP", "PU"]
+  ],
+  "ner": [
+    [],
+    [["盛剑", "ORGANIZATION", 0, 1]]
+  ],
+  "dep": [
+    [[2, "amod"], [5, "nsubj"], [5, "mmod"], [5, "advmod"], [0, "root"], [5, "punct"]],
+    [[2, "nn"], [4, "assmod"], [2, "assm"], [6, "nsubj"], [6, "advmod"], [0, "root"], [6, "dep"], [6, "punct"]]
+  ],
+  "con": [
+    ["TOP", [["IP", [["NP", [["ADJP", [["_", ["急性"]]]], ["NP", [["_", ["肠胃炎"]]]]]], ["VP", [["_", ["要"]], ["VP", [["ADVP", [["_", ["如何"]]]], ["VP", [["_", ["治疗"]]]]]]]], ["_", ["?"]]]]]],
+    ["TOP", [["CP", [["NP", [["DNP", [["NP", [["_", ["盛剑"]], ["_", ["环境"]]]], ["_", ["的"]]]], ["NP", [["_", ["股价"]]]]]], ["VP", [["ADVP", [["_", ["太"]]]], ["VP", [["_", ["高"]]]]]], ["_", ["了"]], ["_", ["。"]]]]]]
+  ]
+}
